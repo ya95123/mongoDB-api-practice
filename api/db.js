@@ -20,6 +20,7 @@ const productSchema = new Schema({
     maxlength: [12, '商品名稱最多輸入12個字']
   },
   price: {
+    // TODO 打中文的回應
     type: Number,
     required: [true, '商品價格必填']
   },
