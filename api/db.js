@@ -33,8 +33,12 @@ const productSchema = new Schema({
     type: Number,
     required: [true, '庫存數量必填']
   }
+}, {
+  // 把 __v 版本紀錄修改次數拿掉
+  versionKey: false
 })
 
+// 資料表變數 = mongoose.model(資料表名稱, 對應的 Schema)
 const product = mongoose.model('products', productSchema)
 
 // 預設匯出
